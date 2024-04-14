@@ -3,7 +3,7 @@ import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
 
-test_data_dir = '../../data/covid_data/wavelet/haar/median/cropped/test/'
+test_data_dir = ''
 
 # Get a list of folders in the directory
 folders = []
@@ -15,7 +15,7 @@ total_preds = 0
 correct_preds = 0
 
 # Load the model
-model = load_model("../vgg16/vgg16_median_wavelet_covid_cropped_20epochs.h5")
+model = load_model("")
 
 for folder in folders:
 
