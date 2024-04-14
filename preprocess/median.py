@@ -1,5 +1,5 @@
 '''
-Attempt to remove noise
+Attempt to remove/reduce noise
 Applies Median filtering to all images in the source directory and then saves them to the destination directory.
 '''
 
@@ -8,8 +8,8 @@ import cv2
 import numpy as np
  
 # source and destination data dir
-src_data_dir = 'D:/K-State/Sem3/690 - Unveiling CNNs Behavior/data/covid_data/original/cropped/val/'
-dest_data_dir = 'D:/K-State/Sem3/690 - Unveiling CNNs Behavior/data/covid_data/original/median/cropped/val/'
+src_data_dir = ''
+dest_data_dir = ''
 
 # Get a list of folders in the directory
 folders = []
