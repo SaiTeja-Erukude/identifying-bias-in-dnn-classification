@@ -7,8 +7,8 @@ import cv2
 import numpy as np
  
 # source and destination data dir
-src_data_dir = 'D:/K-State/Sem3/690 - Unveiling CNNs Behavior/data/covid_data/original/median/cropped/val/'
-dest_data_dir = 'D:/K-State/Sem3/690 - Unveiling CNNs Behavior/data/covid_data/fourier/median/cropped/val/'
+src_data_dir = ''
+dest_data_dir = ''
 
 # Get a list of folders in the directory
 folders = []
@@ -52,8 +52,3 @@ for folder in folders:
         cv2.imwrite(dest_img_path, magnitude)
 
         print('Saved: ', dest_img_path)
-
-# Display the magnitude of the Fourier Transform
-# cv2.imshow('Fourier Transform', magnitude)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
