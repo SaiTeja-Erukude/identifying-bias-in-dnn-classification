@@ -1,7 +1,7 @@
 '''
 Ensemble Classifier Using Weights
 - Predicts the class of an image using 3 models
-- Add weights to the output of softmax layer and decide the class
+- Adds weights to the output of softmax layer and decides the class
 '''
 
 import os
@@ -76,20 +76,7 @@ def ensemblePredict(img_path):
     for i in range(len(base_preds)):
 
         # add all the weights
-
-        # covid_data
-        # 1,    0.5,    1     ==>     72.3% acc
-        # 1,    0.5,    0.7   ==>     70.5% acc
-        # 0.7,  0.5,    1     ==>     70.5% acc
-
-        # covid cropped
-        # 0.7,  0.5,    1     ==>     51% acc
-        # 1,    0.5,    2     ==>     53.5% acc
-        # 1.5,  0.5,    2     ==>     50.4% acc
-
         weight = (1.5 * base_preds[i]) + (0.5 * fourier_preds[i]) + (2 * wavelet_preds[i])
-
-        # weight = (base_preds[i]) + wavelet_preds[i]
         
         res_preds.append(weight)
 
@@ -100,7 +87,7 @@ def ensemblePredict(img_path):
     
 if __name__ == '__main__':
 
-    test_data_dir = '../../data/covid_data/cropped/test/'
+    test_data_dir = ''
 
     # Get a list of folders in the directory
     folders = []
@@ -112,11 +99,11 @@ if __name__ == '__main__':
     correct_preds = 0
 
     # Load the models
-    base_model = load_model("../vgg16/models/covid_cropped/vgg16_covid_cropped_20epochs_acc48.h5")                  # base model trained on original data
-    fourier_model = load_model("../vgg16/models/covid_cropped/vgg16_fourier_covid_cropped_20epochs_acc41.h5")       # model trained on fourier transformed data
-    wavelet_model = load_model("../vgg16/models/covid_cropped/vgg16_wavelet_covid_cropped_20epochs_acc56.h5")       # model trained on wavelet transformed data
+    base_model = load_model("")                  # base model trained on original data
+    fourier_model = load_model("")               # model trained on fourier transformed data
+    wavelet_model = load_model("")               # model trained on wavelet transformed data
 
-    print('All models loaded!\n\n')
+    print('All models are loaded!\n\n')
 
     for folder in folders:
 
