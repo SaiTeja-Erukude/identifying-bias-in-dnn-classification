@@ -6,8 +6,8 @@ import os
 import cv2
 from keras.preprocessing import image
 
-src_data_dir = '../../data/caltech_20/test/'
-dest_data_dir = '../../data/caltech_20/cropped/test/'
+src_data_dir = '../../data/natural_images/original/train/'
+dest_data_dir = '../../data/natural_images/original/cropped/train/'
 
 # Get a list of folders in the directory
 folders = []

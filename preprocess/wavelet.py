@@ -14,8 +14,8 @@ import pywt
 import numpy as np
  
 # source and destination data dir
-src_data_dir = ''
-dest_data_dir = ''
+src_data_dir = '../../data/natural_images/original/cropped/median/val/'
+dest_data_dir = '../../data/natural_images/wavelet/haar/cropped/median/val/'
 
 # Get a list of folders in the directory
 folders = []
